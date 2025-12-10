@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================
+     SeniorWalkInTub.com XML Sitemap
+     ================================ -->
+
+<!-- IMPORTANT NOTES:
+ - Place this file in the root folder of your site.
+ - GitHub Pages will serve this automatically.
+ - Update as new pages or blog posts are added.
+-->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ===== HOMEPAGE ===== -->
+  <url>
+    <loc>https://seniorwalkintub.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- ===== CORE SECTIONS (anchors won't matter to Google, but we list parent pages for indexing depth) ===== -->
+
+  <url>
+    <loc>https://seniorwalkintub.com/#why-tubs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/#features</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/#process</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/#learning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/#faqs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+
+  <!-- ==========================================
+       FUTURE BLOG POSTS (AUTO-INDEX READY PATHS)
+       ========================================== -->
+
+  <url>
+    <loc>https://seniorwalkintub.com/blog/senior-walk-in-tub-benefits.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/blog/walk-in-tubs-for-seniors-vs-standard-baths.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorwalkintub.com/blog/how-to-choose-a-senior-walk-in-tub.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+</urlset>
