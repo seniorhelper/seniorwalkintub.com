@@ -1,6 +1,5 @@
+
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-login.php
 
 Sitemap: https://seniorwalkintub.com/sitemap.xml
