@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="HcVLuSwnCHC66O9Kq5o74oA2kS5RNK_QVle-82Oaa6E" />
+  <meta name="google-site-verification" content="HcVLuSwnCHC66O9Kq5o74oA2kS5RNK_QVIe-82Oaa6E" />
   <title>Senior Walk In Tub | Safe Walk In Tubs For Seniors | Aging Safely Baths</title>
+  <!-- Favicon: shield icon matching Aging Safely Baths branding -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 L56 14 L56 34 C56 48 44 58 32 62 C20 58 8 48 8 34 L8 14 Z' fill='%231f7ea8'/%3E%3Cpath d='M32 4 L56 14 L56 34 C56 48 44 58 32 62 C20 58 8 48 8 34 L8 14 Z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f7ea8'/%3E%3Cstop offset='1' stop-color='%23125674'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolyline points='20,33 28,41 44,25' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png-2.png" />
   <meta name="description" content="Looking for a senior walk in tub that feels safe, comfortable and easy to use? Get one-day worry-free installations or DIY tubs shipped to your door. Senior walk in tubs and walk-in bathtubs for elderly adults with hydrotherapy, low thresholds and trusted brands." />
   <meta name="keywords" content="senior walk in tub, senior walk in tubs, senior walk-in bathtub, senior walk-in bathtubs, walk in tub for seniors, walk in bathtub for elderly, elderly walk in tub, handicap walk in tub, walk-in tubs for elderly, aging in place bathtub" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -1184,6 +1187,79 @@
       .nav-phone { font-size: 0.95rem; }
       .brand-logo-img { height: 110px; }
     }
+
+    /* ============================================================
+       HAMBURGER MENU
+    ============================================================ */
+    .hamburger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: 1.5px solid rgba(31,126,168,0.2);
+      cursor: pointer;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .hamburger-btn:hover { background: var(--bg-muted); }
+    .hamburger-btn span {
+      display: block;
+      width: 22px;
+      height: 2.5px;
+      background: var(--primary-dark);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.2s;
+    }
+    .hamburger-btn.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger-btn.open span:nth-child(2) { opacity: 0; }
+    .hamburger-btn.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: rgba(255,255,255,0.99);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--primary-light);
+      box-shadow: 0 12px 32px rgba(15,23,42,0.12);
+      z-index: 49;
+      flex-direction: column;
+      padding: 0.75rem 1.5rem 1.2rem;
+      gap: 0.1rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block;
+      padding: 0.72rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      border-radius: 10px;
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .mobile-menu a:hover { background: var(--bg-muted); color: var(--primary-dark); }
+    .mobile-menu a.mobile-cta {
+      background: var(--accent);
+      color: #fff; font-weight: 700;
+      margin-top: 0.4rem; text-align: center;
+      box-shadow: 0 6px 18px rgba(230,57,70,0.3);
+    }
+    .mobile-menu a.mobile-cta:hover { background: var(--accent-dark); color: #fff; }
+    .mobile-menu .mobile-divider { height: 1px; background: rgba(15,23,42,0.07); margin: 0.4rem 0; }
+    .mobile-menu .mobile-phone {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.72rem 0.9rem;
+      font-weight: 800; font-size: 1rem; color: var(--primary-dark);
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      .hamburger-btn { display: flex; }
+    }
   </style>
 </head>
 <body>
@@ -1218,7 +1294,7 @@
       <a href="#top" aria-label="Aging Safely Baths & More — Home">
         <img
           class="brand-logo-img"
-          src="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png"
+          src="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png-2.png"
           alt="Aging Safely Baths & More — Senior Walk In Tubs"
           width="300"
           height="200"
@@ -1239,8 +1315,22 @@
       </div>
       <div class="nav-phone-sub">Call Toll-Free · All 50 States &amp; Canada</div>
     </div>
+    <!-- Hamburger for mobile -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</header>
+  <!-- Mobile dropdown menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#why-tubs" onclick="closeMobileMenu()">Why Walk In Tubs</a>
+    <a href="#features" onclick="closeMobileMenu()">Safety &amp; Features</a>
+    <a href="#process" onclick="closeMobileMenu()">How It Works</a>
+    <a href="/walk-in-tubs/" onclick="closeMobileMenu()">Browse Walk In Tub Models</a>
+    <a href="#faqs" onclick="closeMobileMenu()">FAQs</a>
+    <div class="mobile-divider"></div>
+    <a href="tel:18887792284" class="mobile-phone">📞 1-888-779-2284 (BATH)</a>
+    <a href="#quote" class="mobile-cta" onclick="closeMobileMenu()">Get My Free Quote →</a>
+  </nav>
 
 <!-- ============================================================
      ONE-DAY INSTALL BAND
@@ -1984,7 +2074,7 @@
       <div class="footer-logo-wrap">
         <img
           class="footer-logo"
-          src="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png"
+          src="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png-2.png"
           alt="Aging Safely Baths & More"
           loading="lazy"
         />
@@ -2148,6 +2238,27 @@
   });
 </script>
 
+<script>
+  /* ---- Hamburger Menu ---- */
+  var hamburgerBtn = document.getElementById("hamburgerBtn");
+  var mobileMenu = document.getElementById("mobileMenu");
+  hamburgerBtn.addEventListener("click", function() {
+    var isOpen = mobileMenu.classList.toggle("open");
+    hamburgerBtn.classList.toggle("open", isOpen);
+    hamburgerBtn.setAttribute("aria-expanded", isOpen.toString());
+  });
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("open");
+    hamburgerBtn.classList.remove("open");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
+  }
+  document.addEventListener("click", function(e) {
+    if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+</script>
+
 <!-- ============================================================
      SCHEMA.ORG JSON-LD
 ============================================================ -->
@@ -2163,7 +2274,7 @@
       "telephone": "1-888-779-2284",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png"
+        "url": "https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png-2.png"
       },
       "sameAs": [
         "https://www.agingsafelybaths.com",
