@@ -805,6 +805,7 @@
       color: #e5f2ff;
       position: relative;
       overflow: hidden;
+      scroll-margin-top: 80px;
     }
     .form-section::before {
       content: '';
@@ -929,29 +930,6 @@
     .stars { color: #f59e0b; font-size: 1.05rem; letter-spacing: 0.05em; margin-bottom: 0.7rem; }
     .testimonial-text { font-size: 0.91rem; color: var(--text-muted); line-height: 1.65; margin: 0 0 0.8rem; font-style: italic; }
     .testimonial-author { font-size: 0.83rem; font-weight: 700; color: var(--primary-dark); }
-
-    /* ============================================================
-       BLOG / LEARNING CENTER
-    ============================================================ */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-    .blog-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(15,23,42,0.08);
-      padding: 1.3rem 1.4rem;
-      background: #fff;
-      box-shadow: 0 14px 32px rgba(15,23,42,0.07);
-      display: flex; flex-direction: column; gap: 0.4rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .blog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .blog-card h3 { margin: 0; font-size: 1rem; font-family: var(--font-display); font-weight: 700; line-height: 1.35; }
-    .blog-card h3 a { color: #0f172a; }
-    .blog-card p { margin: 0; font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
-    .blog-meta { font-size: 0.74rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
 
     /* ============================================================
        EXPANDED FAQ
@@ -1259,6 +1237,10 @@
     }
     @media (max-width: 900px) {
       .hamburger-btn { display: flex; }
+      .main-nav { padding-right: 1rem; }
+    }
+    @media (max-width: 520px) {
+      .main-nav { padding-left: 0.75rem; padding-right: 0.75rem; }
     }
   </style>
 </head>
@@ -1368,7 +1350,7 @@
         <div><span class="icon">✓</span> <span>Walk in tubs for seniors and low-threshold shower options when that's the better fit.</span></div>
       </div>
       <div class="hero-ctas">
-        <button class="btn-primary" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'});">
+        <button class="btn-primary" onclick="document.querySelector('#quote .form-card').scrollIntoView({behavior:'smooth', block:'start'});">
           Get My Free Senior Walk In Tub Quote
         </button>
         <button class="btn-secondary" onclick="document.getElementById('why-tubs').scrollIntoView({behavior:'smooth'});">
@@ -1878,36 +1860,6 @@
   </div>
 </section>
 
-<!-- ============================================================
-     LEARNING CENTER
-============================================================ -->
-<section id="learning">
-  <div class="section-inner">
-    <p class="section-kicker">Senior Walk In Tub Learning Center</p>
-    <h2 class="section-title">Learn more about walk in tubs for seniors before you decide.</h2>
-    <p class="section-subtitle">
-      We believe informed seniors and families make better long-term decisions. Our learning center covers how senior walk in tubs work, how to compare models, how to decide between a tub or shower, and how to maximize your budget.
-    </p>
-
-    <div class="blog-grid">
-      <article class="blog-card">
-        <p class="blog-meta">Coming soon &nbsp;•&nbsp; Blog</p>
-        <h3><a href="/blog/senior-walk-in-tub-benefits.html">7 ways a senior walk in tub can make daily life easier.</a></h3>
-        <p>From safer entry to warm water therapy, learn how the right walk-in bathtub for elderly adults can reduce stress for seniors and caregivers — and help maintain independence at home.</p>
-      </article>
-      <article class="blog-card">
-        <p class="blog-meta">Coming soon &nbsp;•&nbsp; Blog</p>
-        <h3><a href="/blog/walk-in-tubs-for-seniors-vs-standard-baths.html">Walk in tubs for seniors vs standard bathtubs — an honest comparison.</a></h3>
-        <p>A side-by-side look at safety, comfort, maintenance and cost so you can decide whether upgrading to a senior walk in tub is the right move for your household.</p>
-      </article>
-      <article class="blog-card">
-        <p class="blog-meta">Coming soon &nbsp;•&nbsp; Blog</p>
-        <h3><a href="/blog/how-to-choose-a-senior-walk-in-tub.html">How to choose the right senior walk in tub, step by step.</a></h3>
-        <p>We'll walk through measuring your space, selecting features and pairing your tub with grab bars, non-slip flooring and other upgrades that complete the picture.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      EXPANDABLE FAQ — EXPANDED VERSION
