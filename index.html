@@ -104,6 +104,8 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 2px solid rgba(31,126,168,0.12);
       box-shadow: 0 2px 20px rgba(15,23,42,0.08);
+      /* Required so absolute mobile-menu positions relative to header */
+      isolation: isolate;
     }
 
     .main-nav {
@@ -1146,7 +1148,7 @@
     .modal-body .form-group input, .modal-body .form-group select { border-radius: 10px; }
 
     /* ============================================================
-       RESPONSIVE
+       RESPONSIVE — GRIDS
     ============================================================ */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: minmax(0, 1fr); }
@@ -1158,12 +1160,21 @@
       .nav-links { display: none; }
       .main-nav { justify-content: space-between; }
       .brand-logo-img { height: 140px; }
+      /* Hide phone on mobile — it's in the dropdown instead */
+      .nav-right { display: none; }
+      .hamburger-btn { display: flex; }
+      .main-nav {
+        max-width: 100%;
+        padding: 0.6rem 1rem;
+        box-sizing: border-box;
+        width: 100%;
+      }
     }
     @media (max-width: 520px) {
       .install-band-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
       .hero-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .nav-phone { font-size: 0.95rem; }
       .brand-logo-img { height: 110px; }
+      .main-nav { padding: 0.5rem 0.85rem; }
     }
 
     /* ============================================================
@@ -1199,7 +1210,8 @@
       display: none;
       position: absolute;
       top: 100%;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       background: rgba(255,255,255,0.99);
       backdrop-filter: blur(12px);
       border-bottom: 2px solid var(--primary-light);
@@ -1223,31 +1235,23 @@
     .mobile-menu a:hover { background: var(--bg-muted); color: var(--primary-dark); }
     .mobile-menu a.mobile-cta {
       background: var(--accent);
-      color: #fff; font-weight: 700;
-      margin-top: 0.4rem; text-align: center;
+      color: #fff;
+      font-weight: 700;
+      margin-top: 0.4rem;
+      text-align: center;
       box-shadow: 0 6px 18px rgba(230,57,70,0.3);
     }
     .mobile-menu a.mobile-cta:hover { background: var(--accent-dark); color: #fff; }
     .mobile-menu .mobile-divider { height: 1px; background: rgba(15,23,42,0.07); margin: 0.4rem 0; }
     .mobile-menu .mobile-phone {
-      display: flex; align-items: center; gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.72rem 0.9rem;
-      font-weight: 800; font-size: 1rem; color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--primary-dark);
       text-decoration: none;
-    }
-    @media (max-width: 900px) {
-      .hamburger-btn { display: flex; }
-      .main-nav {
-        max-width: 100%;
-        padding: 0.6rem 1rem 0.6rem 1rem;
-        box-sizing: border-box;
-        width: 100%;
-      }
-    }
-    @media (max-width: 520px) {
-      .main-nav {
-        padding: 0.5rem 0.75rem;
-      }
     }
   </style>
 </head>
@@ -1320,7 +1324,7 @@
     <a href="tel:18887792284" class="mobile-phone">📞 1-888-779-2284 (BATH)</a>
     <a href="#quote-form" class="mobile-cta" onclick="closeMobileMenu()">Get My Free Quote →</a>
   </nav>
-
+</header>
 <!-- ============================================================
      ONE-DAY INSTALL BAND
 ============================================================ -->
