@@ -1148,36 +1148,6 @@
     .modal-body .form-group input, .modal-body .form-group select { border-radius: 10px; }
 
     /* ============================================================
-       RESPONSIVE — GRIDS
-    ============================================================ */
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: minmax(0, 1fr); }
-      .form-layout { grid-template-columns: minmax(0, 1fr); }
-      .faq-grid { grid-template-columns: minmax(0, 1fr); }
-      .split { grid-template-columns: minmax(0, 1fr); }
-      .footer-inner { grid-template-columns: minmax(0, 1fr); }
-      .veteran-inner { grid-template-columns: minmax(0, 1fr); text-align: center; }
-      .nav-links { display: none; }
-      .main-nav { justify-content: space-between; }
-      .brand-logo-img { height: 140px; }
-      /* Hide phone on mobile — it's in the dropdown instead */
-      .nav-right { display: none; }
-      .hamburger-btn { display: flex; }
-      .main-nav {
-        max-width: 100%;
-        padding: 0.6rem 1rem;
-        box-sizing: border-box;
-        width: 100%;
-      }
-    }
-    @media (max-width: 520px) {
-      .install-band-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-      .hero-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .brand-logo-img { height: 110px; }
-      .main-nav { padding: 0.5rem 0.85rem; }
-    }
-
-    /* ============================================================
        HAMBURGER MENU
     ============================================================ */
     .hamburger-btn {
@@ -1252,6 +1222,37 @@
       font-size: 1rem;
       color: var(--primary-dark);
       text-decoration: none;
+    }
+
+    /* ============================================================
+       RESPONSIVE — must come LAST so media queries win
+    ============================================================ */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: minmax(0, 1fr); }
+      .form-layout { grid-template-columns: minmax(0, 1fr); }
+      .faq-grid { grid-template-columns: minmax(0, 1fr); }
+      .split { grid-template-columns: minmax(0, 1fr); }
+      .footer-inner { grid-template-columns: minmax(0, 1fr); }
+      .veteran-inner { grid-template-columns: minmax(0, 1fr); text-align: center; }
+      .nav-links { display: none; }
+      .nav-right { display: flex; }
+      .nav-phone { font-size: 0.85rem; }
+      .nav-phone-sub { display: none; }
+      .hamburger-btn { display: flex; }
+      .main-nav {
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%;
+        padding: 0.6rem 1rem;
+        box-sizing: border-box;
+      }
+      .brand-logo-img { height: 140px; }
+    }
+    @media (max-width: 520px) {
+      .install-band-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .hero-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .brand-logo-img { height: 110px; }
+      .main-nav { padding: 0.5rem 0.85rem; }
     }
   </style>
 </head>
