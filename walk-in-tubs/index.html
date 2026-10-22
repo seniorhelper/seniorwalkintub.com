@@ -549,7 +549,7 @@
 .bbb-hrow a.bbb-lnk{color:var(--primary-dark);text-decoration:underline}
 @media (max-width:900px){.bbb-hrow{display:none}}
 .footer-logo-wrap{display:block;background:none;padding:0;border:0;border-radius:0;margin-bottom:0}
-.footer-logo-wrap .footer-logo{width:260px;max-width:100%;height:auto}
+.footer-logo-wrap .footer-logo{width:280px;max-width:100%;height:auto}
 footer .bbb-fbrand{margin-bottom:1rem}
 .bbb-val{background:#fff;border-color:#dbe7ef;color:var(--text-main)}
 .bbb-val .bbb-seal{width:160px}
@@ -566,7 +566,28 @@ footer .bbb-fbrand{margin-bottom:1rem}
 .bbb-why-swt li{margin-bottom:.35rem}
 .bbb-why-swt a:not(.bbb-seal){color:var(--primary-dark);text-decoration:underline}
 
+
+/* Mobile menu (ported from home page) + senior readability (2026-10-22) */
+.hamburger-btn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:1.5px solid rgba(31,126,168,0.2);cursor:pointer;padding:8px 10px;min-width:48px;min-height:48px;border-radius:10px;flex-shrink:0}
+.hamburger-btn:hover{background:var(--bg-muted)}
+.hamburger-btn span{display:block;width:22px;height:2.5px;background:var(--primary-dark);border-radius:2px;transition:transform .25s,opacity .2s}
+.hamburger-btn.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.hamburger-btn.open span:nth-child(2){opacity:0}
+.hamburger-btn.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,0.99);border-bottom:2px solid var(--primary-light);box-shadow:0 12px 32px rgba(15,23,42,0.12);z-index:49;flex-direction:column;padding:.75rem 1.5rem 1.2rem;gap:.1rem;max-height:80vh;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{display:block;padding:.8rem .9rem;font-weight:600;font-size:1.05rem;color:var(--text-main);border-radius:10px;text-decoration:none}
+.mobile-menu a:hover{background:var(--bg-muted);color:var(--primary-dark)}
+.mobile-menu a.mobile-cta{background:var(--accent);color:#fff;font-weight:700;margin-top:.4rem;text-align:center}
+.mobile-menu .mobile-divider{height:1px;background:rgba(15,23,42,0.07);margin:.4rem 0}
+.mobile-menu .mobile-phone{font-weight:800;color:var(--primary-dark)}
+@media (max-width:900px){.hamburger-btn{display:flex}.nav-phone-sub{display:none}}
+@media (max-width:700px){
+  main p:not(.form-disclaimer):not(.form-helper), main li, main td, main th, .faq-answer, .faq-answer p, .faq-question { font-size:17px !important; line-height:1.65; }
+  .footer-nav a { display:inline-block; padding:10px 4px; font-size:16px; }
+}
 </style>
+<style id="hdr-fix-2026-10-22">@media (max-width:1380px){.nav-links{display:none!important}.hamburger-btn{display:flex!important}.nav-phone-sub{display:none}}.content-body p,.content-body li{font-size:1.1rem}input:not([type=checkbox]):not([type=radio]),select{min-height:44px}.brand-logo-img{width:280px!important;height:auto!important;max-width:none}@media (max-width:900px){.brand-logo-img{width:200px!important}}@media (max-width:600px){.nav-phone a{font-size:0;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border:1.5px solid rgba(31,126,168,.35);border-radius:10px}.nav-phone a::after{content:"Call";font-size:1.05rem}.main-nav{gap:8px}}</style>
 </head>
 <body>
 
@@ -594,25 +615,38 @@ footer .bbb-fbrand{margin-bottom:1rem}
     <div class="brand">
       <a href="/" aria-label="Aging Safely Baths — Home">
         <img class="brand-logo-img"
-          src="https://www.agingsafelybaths.com/wp-content/uploads/2025/12/aging-safely-baths-logo-2.png-2.png"
+          src="/assets/aging-safely-baths-logo-header.webp"
           alt="Aging Safely Baths & More — Walk In Tubs"
-          width="300" height="200" />
+          width="280" height="74" />
       </a>
     </div>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="/">Home</a>
-      <a href="/#why-tubs" class="nav-pill">Why Walk In Tubs</a>
-      <a href="/#process">How It Works</a>
-      <a href="/walk-in-tubs/" class="nav-pill active-page">Browse Tub Models</a>
-      <a href="/#faqs">FAQs</a>
-      <a href="/#quote" class="nav-pill cta-pill">Free Quote</a>
+      <a href="/walk-in-tub-fit-check/">Fit Check</a>
+      <a href="/walk-in-tub-after-hip-or-knee-replacement/">Hip &amp; Knee Guide</a>
+      <a href="/getting-in-and-out-of-a-walk-in-tub/">Getting In &amp; Out</a>
+      <a href="/walk-in-tubs/" class="nav-pill active-page" aria-current="page">Browse Tub Models</a>
+      <a href="#quote-bottom" class="nav-pill cta-pill">Free Quote</a>
     </nav>
     <div class="nav-right">
       <div class="nav-phone"><a href="tel:18887792284">📞 1-888-779-2284 (BATH)</a></div>
       <div class="nav-phone-sub">Call Toll-Free · All 50 States &amp; Canada</div>
     </div>
+    <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="bbb-hrow"><div class="bbb-hrow-in"><a class="bbb-seal bbb-d" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener" aria-label="BBB Accredited Business — Aging Safely Walk in Tubs"><img src="https://seal-alaskaoregonwesternwashington.bbb.org/seals/blue-seal-200-65-bbb-90145069.png" width="200" height="65" alt="Aging Safely Walk in Tubs BBB Business Review" loading="lazy" decoding="async"></a><span>BBB Accredited Business &middot; <a class="bbb-lnk" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener">see the listing</a></span></div></div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/walk-in-tub-fit-check/">Walk-In Tub Fit Check</a>
+    <a href="/walk-in-tub-after-hip-or-knee-replacement/">After Hip or Knee Replacement</a>
+    <a href="/getting-in-and-out-of-a-walk-in-tub/">Getting In &amp; Out Safely</a>
+    <a href="/walk-in-tubs/" aria-current="page">Browse Walk In Tub Models</a>
+    <div class="mobile-divider"></div>
+    <a href="tel:+18887792284" class="mobile-phone">📞 1-888-779-2284 (BATH)</a>
+    <a href="#quote-bottom" class="mobile-cta">Get My Free Quote →</a>
+  </nav>
 </header>
 <div class="bbb-m" role="note"><a class="bbb-seal bbb-m-seal" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener" aria-label="BBB Accredited Business — Aging Safely Walk in Tubs"><img src="https://seal-alaskaoregonwesternwashington.bbb.org/seals/blue-seal-200-65-bbb-90145069.png" width="200" height="65" alt="Aging Safely Walk in Tubs BBB Business Review" loading="lazy" decoding="async"></a><span>BBB accredited &mdash; <a class="bbb-lnk" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener">our listing</a>.</span></div>
 
@@ -804,7 +838,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
 
       <h3>Bariatric and wide-body walk in tub models</h3>
       <p>
-        Standard walk in tubs typically have an interior seat width of around 17 to 19 inches. For larger bathers, <a href="https://www.agingsafelybaths.com/product/bariatric-walk-in-tub/" target="_blank" rel="noopener"><strong>bariatric walk in tubs</strong></a> offer extra-wide interior dimensions — often 30 inches or more — with reinforced walls and higher weight capacities, typically rated to 400–600 lbs depending on the model. Ella's Bubbles and Best Bath both offer bariatric configurations. If the bather is on the larger side, getting the right model from the start avoids costly replacements later. <a href="https://www.agingsafelybaths.com/product/bariatric-walk-in-tub/" target="_blank" rel="noopener">View our bariatric walk in tub options →</a>
+        Standard walk in tubs typically have an interior seat width of around 17 to 19 inches. For larger bathers, <a href="https://www.agingsafelybaths.com/walk-in-tubs/hydro-dimensions-3555/" target="_blank" rel="noopener"><strong>bariatric walk in tubs</strong></a> offer extra-wide interior dimensions — often 30 inches or more — with reinforced walls and higher weight capacities, typically rated to 400–600 lbs depending on the model. Ella's Bubbles and Best Bath both offer bariatric configurations. If the bather is on the larger side, getting the right model from the start avoids costly replacements later. <a href="https://www.agingsafelybaths.com/walk-in-tubs/hydro-dimensions-3555/" target="_blank" rel="noopener">View our bariatric walk in tub options →</a>
       </p>
 
       <h3>Walk in tub and shower combination models</h3>
@@ -855,6 +889,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
       </div>
 
       <h2>How we help you choose between walk in tub brands</h2>
+      <p>Not sure which type of tub fits your body? Try our <a href="/walk-in-tub-fit-check/">walk-in tub fit check</a> first. It matches your step-in, seat-height, walker or wheelchair needs to a tub type in about two minutes.</p>
       <p>
         The four brands we carry are not interchangeable — each has distinct engineering strengths, aesthetic profiles and price points. <strong>Ella's Bubbles</strong> offers the broadest model range and the most configuration flexibility, making it a natural starting point for many customers. <strong>Best Bath</strong> excels in modular accessibility solutions and is especially strong if a barrier-free shower is part of the plan. <strong>Meditub</strong> appeals strongly to buyers who prioritize American manufacturing and want a straightforward, well-built domestic product. <strong>Hydrodimensions</strong> is the choice for seniors who don't want to feel like their bathroom looks like a medical supply catalog — their contemporary styling integrates better with modern bathroom aesthetics.
       </p>
@@ -1160,11 +1195,14 @@ footer .bbb-fbrand{margin-bottom:1rem}
   <div class="footer-inner">
     <div>
       <div class="bbb-fbrand"><div class="footer-logo-wrap">
-        <img class="footer-logo" src="/assets/aging-safely-baths-logo-footer-dark.webp" alt="Aging Safely Baths &amp; More" width="260" height="69" loading="lazy" />
+        <img class="footer-logo" src="/assets/aging-safely-baths-logo-footer-dark.webp" alt="Aging Safely Baths &amp; More" width="280" height="74" loading="lazy" />
       </div><div class="bbb-fcard"><a class="bbb-seal bbb-f" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener" aria-label="BBB Accredited Business — Aging Safely Walk in Tubs"><img src="https://seal-alaskaoregonwesternwashington.bbb.org/seals/blue-seal-200-65-bbb-90145069.png" width="200" height="65" alt="Aging Safely Walk in Tubs BBB Business Review" loading="lazy" decoding="async"></a><b>BBB Accredited Business</b></div></div>
       <div class="footer-badge">🇺🇸 Trusted provider of walk in tubs — All 50 states &amp; Canada</div>
       <div class="footer-nav">
         <a href="/">Home</a>
+        <a href="/walk-in-tub-fit-check/">Walk-In Tub Fit Check</a>
+        <a href="/walk-in-tub-after-hip-or-knee-replacement/">After Hip or Knee Replacement</a>
+        <a href="/getting-in-and-out-of-a-walk-in-tub/">Getting In &amp; Out Safely</a>
         <a href="/walk-in-tubs/">Walk In Tub Models</a>
         <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener nofollow">AgingSafelyBaths.com</a>
         <a href="https://www.agingsafelybaths.com/ella-bubbles-walk-in-tubs/" target="_blank" rel="noopener nofollow">Ella's Bubbles</a>
@@ -1174,9 +1212,9 @@ footer .bbb-fbrand{margin-bottom:1rem}
         <a href="https://www.agingsafelybaths.com/white-glove-installation/" target="_blank" rel="noopener nofollow">White Glove Installation</a>
         <a href="https://www.agingsafelybaths.com/va-hisa-grant-for-bathroom-modifications/" target="_blank" rel="noopener nofollow">VA HISA Grant</a>
         <a href="https://www.agingsafelybaths.com/walk-in-tub-guide/" target="_blank" rel="noopener nofollow">Walk-In Tub Buyer's Guide</a>
-        <a href="https://www.showers4less.com" target="_blank" rel="noopener nofollow">Showers4Less.com</a>
+        <a href="https://showers4less.com/" target="_blank" rel="noopener nofollow">Showers4Less.com</a>
         <a href="https://www.seniorwalkinbathtubs.com" target="_blank" rel="noopener nofollow">SeniorWalkInBathtubs.com</a>
-        <a href="/#quote">Free Quote</a>
+        <a href="#quote-bottom">Free Quote</a>
         <a href="/sitemap.xml">Sitemap</a>
       </div>
       <div class="footer-meta">
@@ -1248,7 +1286,9 @@ footer .bbb-fbrand{margin-bottom:1rem}
   (function() { emailjs.init("alWutsHLG6c3h9P2j"); })();
 
   function handleForm(formId, statusId) {
-    document.getElementById(formId).addEventListener("submit", function(e) {
+    var formEl = document.getElementById(formId);
+    if (!formEl) return;
+    formEl.addEventListener("submit", function(e) {
       e.preventDefault();
       var form = this;
       var statusEl = document.getElementById(statusId);
@@ -1276,6 +1316,22 @@ footer .bbb-fbrand{margin-bottom:1rem}
   function closeQuoteModal() { document.getElementById("quote-modal").classList.remove("active"); document.body.style.overflow = ""; }
   document.getElementById("quote-modal").addEventListener("click", function(e) { if (e.target === this) closeQuoteModal(); });
   document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeQuoteModal(); });
+
+  /* ---- Mobile menu ---- */
+  (function () {
+    var btn = document.getElementById("hamburgerBtn");
+    var menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    function closeMenu() { menu.classList.remove("open"); btn.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+    btn.addEventListener("click", function () {
+      var isOpen = menu.classList.toggle("open");
+      btn.classList.toggle("open", isOpen);
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    menu.addEventListener("click", function (e) { if (e.target.tagName === "A") closeMenu(); });
+    document.addEventListener("click", function (e) { if (!btn.contains(e.target) && !menu.contains(e.target)) closeMenu(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+  })();
 </script>
 
 <!-- SCHEMA JSON-LD -->

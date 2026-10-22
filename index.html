@@ -1337,7 +1337,7 @@
 .bbb-hrow a.bbb-lnk{color:var(--primary-dark);text-decoration:underline}
 @media (max-width:900px){.bbb-hrow{display:none}}
 .footer-logo-wrap{display:block;background:none;padding:0;border:0;border-radius:0;margin-bottom:0}
-.footer-logo-wrap .footer-logo{width:260px;max-width:100%;height:auto}
+.footer-logo-wrap .footer-logo{width:280px;max-width:100%;height:auto}
 footer .bbb-fbrand{margin-bottom:1rem}
 .bbb-val{background:#fff;border-color:#dbe7ef;color:var(--text-main)}
 .bbb-val .bbb-seal{width:160px}
@@ -1354,7 +1354,15 @@ footer .bbb-fbrand{margin-bottom:1rem}
 .bbb-why-swt li{margin-bottom:.35rem}
 .bbb-why-swt a:not(.bbb-seal){color:var(--primary-dark);text-decoration:underline}
 
+/* Senior readability + tap targets (2026-10-22) */
+@media (max-width:700px){
+  main p:not(.form-disclaimer):not(.form-helper), main li, main td, main th, .faq-answer, .faq-answer p, .faq-question { font-size:17px !important; line-height:1.65; }
+  .footer-nav a { display:inline-block; padding:10px 4px; font-size:16px; }
+}
+.footer-logo-wrap .footer-logo{width:280px;max-width:100%;height:auto}
+
 </style>
+<style id="hdr-fix-2026-10-22">@media (max-width:1380px){.nav-links{display:none!important}.hamburger-btn{display:flex!important}.nav-phone-sub{display:none}}.content-body p,.content-body li{font-size:1.1rem}input:not([type=checkbox]):not([type=radio]),select{min-height:44px}.brand-logo-img{width:280px!important;height:auto!important;max-width:none}@media (max-width:900px){.brand-logo-img{width:200px!important}}@media (max-width:600px){.nav-phone a{font-size:0;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border:1.5px solid rgba(31,126,168,.35);border-radius:10px}.nav-phone a::after{content:"Call";font-size:1.05rem}.main-nav{gap:8px}}</style>
 </head>
 <body>
 
@@ -1388,10 +1396,9 @@ footer .bbb-fbrand{margin-bottom:1rem}
       <a href="#top" aria-label="Aging Safely Baths & More — Home">
         <img
           class="brand-logo-img"
-          src="https://www.agingsafelybaths.com/wp-content/uploads/2026/03/Aging-Safely-Baths-Logo-320.png"
+          src="/assets/aging-safely-baths-logo-header.webp"
           alt="Aging Safely Baths & More — Senior Walk In Tubs"
-          width="300"
-          height="200"
+          width="280" height="74"
         />
       </a>
     </div>
@@ -1399,6 +1406,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
       <a href="#why-tubs" class="nav-pill">Why Walk In Tubs</a>
       <a href="#features">Safety &amp; Features</a>
       <a href="#process">How It Works</a>
+      <a href="/walk-in-tub-fit-check/">Fit Check</a>
       <a href="/walk-in-tubs/">Browse Tub Models</a>
       <a href="#faqs">FAQs</a>
       <a href="#quote-form" class="nav-pill cta-pill">Free Quote</a>
@@ -1420,6 +1428,9 @@ footer .bbb-fbrand{margin-bottom:1rem}
     <a href="#why-tubs" onclick="closeMobileMenu()">Why Walk In Tubs</a>
     <a href="#features" onclick="closeMobileMenu()">Safety &amp; Features</a>
     <a href="#process" onclick="closeMobileMenu()">How It Works</a>
+    <a href="/walk-in-tub-fit-check/" onclick="closeMobileMenu()">Walk-In Tub Fit Check</a>
+    <a href="/walk-in-tub-after-hip-or-knee-replacement/" onclick="closeMobileMenu()">After Hip or Knee Replacement</a>
+    <a href="/getting-in-and-out-of-a-walk-in-tub/" onclick="closeMobileMenu()">Getting In &amp; Out Safely</a>
     <a href="/walk-in-tubs/" onclick="closeMobileMenu()">Browse Walk In Tub Models</a>
     <a href="#faqs" onclick="closeMobileMenu()">FAQs</a>
     <div class="mobile-divider"></div>
@@ -1486,8 +1497,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
       </div>
       <div class="hero-thumbs">
         <div class="hero-thumb">
-          <img src="https://www.agingsafelybaths.com/wp-content/uploads/2023/04/bariatric-walk-in-bathtub-image.png"
-               alt="Extra wide bariatric walk in tub for seniors" loading="lazy" />
+          <img src="/assets/img/ella-transferxxl-walk-in-tub.webp"
+               alt="Extra-wide Ella's Bubbles TransferXXL walk-in tub with outward-swing door" width="800" height="800" loading="lazy" />
           <div class="hero-thumb-caption">Extra wide bariatric models for larger bathers.</div>
         </div>
         <div class="hero-thumb">
@@ -1496,8 +1507,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
           <div class="hero-thumb-caption">Grab bars, seat &amp; jet placement diagram.</div>
         </div>
         <div class="hero-thumb">
-          <img src="https://www.agingsafelybaths.com/wp-content/uploads/2023/03/walk-in-tub-cost-image.jpg"
-               alt="Senior walk in tub water tested at factory before shipping" loading="lazy" />
+          <img src="/assets/img/ella-elite-walk-in-tub.webp"
+               alt="Ella's Bubbles Elite walk-in tub with low step-in door and built-in seat" width="900" height="900" loading="lazy" />
           <div class="hero-thumb-caption">Every tub water-tested before it ships.</div>
         </div>
       </div>
@@ -1628,7 +1639,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
         <a href="https://www.agingsafelybaths.com/walk-in-tubs/" target="_blank" rel="noopener">complete walk in tub lineup at Aging Safely Baths</a>
         or <a href="/walk-in-tubs/">browse models on this site</a>.
         Prefer a shower instead? Our sister brand
-        <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a>
+        <a href="https://showers4less.com/" target="_blank" rel="noopener">Showers4Less.com</a>
         carries barrier-free and roll in options — we'll help you compare both.
       </p>
     </div>
@@ -1637,8 +1648,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
       <img src="https://www.agingsafelybaths.com/wp-content/uploads/2016/10/top_view_detailed_diagram5-1.jpg"
            alt="Detailed diagram of a senior walk in tub with labeled safety features"
            loading="lazy" />
-      <img src="https://www.agingsafelybaths.com/wp-content/uploads/2016/08/4-deluxe-massage-LH-1000.jpg"
-           alt="Hydrotherapy and dual drain system in a senior walk in tub"
+      <img src="/assets/img/ella-deluxe-walk-in-tub.webp"
+           alt="Ella's Bubbles Deluxe walk-in tub with inward-swing door and grab bar" width="800" height="800"
            style="margin-top:0.9rem;" loading="lazy" />
       <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.4rem; line-height:1.5;">
         Feature diagrams show how grab bars, seating, drains and hydrotherapy jets work together to make bathing more comfortable and accessible for seniors.
@@ -1658,6 +1669,24 @@ footer .bbb-fbrand{margin-bottom:1rem}
       Choosing the right bathing solution takes more than a quick search. These resources from Aging Safely Baths break down everything you need to know about senior walk in tubs in plain language.
     </p>
     <div class="resource-grid">
+      <a href="/walk-in-tub-fit-check/" class="resource-card">
+        <div class="resource-card-icon">🧭</div>
+        <h3>Walk-In Tub Fit Check for Seniors</h3>
+        <p>Answer nine questions about your step height, standing up, hips and knees, walker or wheelchair, and space. See which tub type fits your body.</p>
+        <span class="res-link">Start the fit check →</span>
+      </a>
+      <a href="/walk-in-tub-after-hip-or-knee-replacement/" class="resource-card">
+        <div class="resource-card-icon">🦴</div>
+        <h3>Walk-In Tub After Hip or Knee Replacement</h3>
+        <p>What hospital rehab guides say about tub transfers, seat height and soaking, and how to time a walk-in tub around your recovery.</p>
+        <span class="res-link">Read the guide →</span>
+      </a>
+      <a href="/getting-in-and-out-of-a-walk-in-tub/" class="resource-card">
+        <div class="resource-card-icon">🚪</div>
+        <h3>Getting In and Out With Arthritis or Balance Problems</h3>
+        <p>The four risky moments in a walk-in tub bath, the features that help with each one, and a self-check you can do at home.</p>
+        <span class="res-link">Read the guide →</span>
+      </a>
       <a href="https://www.agingsafelybaths.com/walk-in-tub-guide/" target="_blank" rel="noopener" class="resource-card">
         <div class="resource-card-icon">📘</div>
         <h3>The Complete Buyer's Handbook for Walk In Tubs</h3>
@@ -1767,8 +1796,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
       </div>
 
       <div>
-        <img src="https://www.agingsafelybaths.com/wp-content/uploads/2023/04/walk-in-tub-image-scaled.jpg"
-             alt="Senior walk in tub next to a glass shower enclosure for comparison" loading="lazy" />
+        <img src="/assets/img/ella-standard-walk-in-tub.webp"
+             alt="Ella's Bubbles Standard walk-in tub with low-threshold door" width="768" height="768" loading="lazy" />
         <p style="font-size:0.86rem; color:var(--text-muted); margin-top:0.55rem; line-height:1.6;">
           Some homes choose both: a senior walk in tub for relaxing soaks and a separate
           <a href="https://www.agingsafelybaths.com/handicap-showers/" target="_blank" rel="noopener nofollow">ADA or handicap shower</a>
@@ -1905,7 +1934,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
           </ul>
           <p style="margin:0.5rem 0 0; font-size:0.84rem; color:#7dd3fc;">
             If a barrier-free shower is the better path, we'll point you toward
-            <a href="https://www.showers4less.com" target="_blank" rel="noopener" style="color:#7dd3fc; text-decoration:underline;">Showers4Less.com</a>
+            <a href="https://showers4less.com/" target="_blank" rel="noopener" style="color:#7dd3fc; text-decoration:underline;">Showers4Less.com</a>
             — a brand we trust for accessible shower solutions.
           </p>
         </div>
@@ -2100,7 +2129,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
             <span class="faq-chevron">▾</span>
           </summary>
           <div class="faq-answer">
-            <p>We appreciate the honest question — and the honest answer is: sometimes a shower is the better choice. For seniors who use a wheelchair full-time or strongly prefer fast showers over soaking baths, a <a href="https://www.agingsafelybaths.com/roll-in-shower-guide/" target="_blank" rel="noopener nofollow">low threshold or roll in shower</a> may be the more practical long-term fit. In those cases, we'll point you toward <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a> — because we never push a walk in tub when a shower is clearly the better answer.</p>
+            <p>We appreciate the honest question — and the honest answer is: sometimes a shower is the better choice. For seniors who use a wheelchair full-time or strongly prefer fast showers over soaking baths, a <a href="https://www.agingsafelybaths.com/roll-in-shower-guide/" target="_blank" rel="noopener nofollow">low threshold or roll in shower</a> may be the more practical long-term fit. In those cases, we'll point you toward <a href="https://showers4less.com/" target="_blank" rel="noopener">Showers4Less.com</a> — because we never push a walk in tub when a shower is clearly the better answer.</p>
           </div>
         </details>
 
@@ -2220,7 +2249,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
             <span class="faq-chevron">▾</span>
           </summary>
           <div class="faq-answer">
-            <p>A walk in tub's entry threshold is usually just a few inches tall, compared with the roughly 14 to 15 inch wall you step over on a standard bathtub. The exact height varies by model, so compare the spec sheet with how high your loved one can comfortably lift their feet. If even a few inches is too much, a roll-in or low-threshold shower may be the safer choice.</p>
+            <p>A walk in tub's entry threshold is usually just a few inches tall, compared with the roughly 14 to 15 inch wall you step over on a standard bathtub. The exact height varies by model, so compare the spec sheet with how high your loved one can comfortably lift their feet. If even a few inches is too much, a roll-in or low-threshold shower may be the safer choice. Our <a href="/walk-in-tub-fit-check/">walk-in tub fit check</a> compares your step, seat and mobility needs with each tub type.</p>
           </div>
         </details>
 
@@ -2230,7 +2259,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
             <span class="faq-chevron">▾</span>
           </summary>
           <div class="faq-answer">
-            <p>Inward-swinging doors seal against water pressure and suit tight bathrooms because they need no clearance outside the tub. Outward-swinging doors leave more open space for getting in and out, which helps seniors who use a walker or need a caregiver's help, but they require clear floor space in front of the tub. Measure the open floor beside your current tub before choosing.</p>
+            <p>Inward-swinging doors seal against water pressure and suit tight bathrooms because they need no clearance outside the tub. Outward-swinging doors leave more open space for getting in and out, which helps seniors who use a walker or need a caregiver's help, but they require clear floor space in front of the tub. Measure the open floor beside your current tub before choosing. For walker tips, see <a href="/getting-in-and-out-of-a-walk-in-tub/">getting in and out of a walk-in tub safely</a>.</p>
           </div>
         </details>
 
@@ -2262,7 +2291,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
            loading="lazy" />
       <p style="font-size:0.83rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.65;">
         When a tub isn't the right solution, we can help you explore barrier-free and roll in showers through
-        <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a>
+        <a href="https://showers4less.com/" target="_blank" rel="noopener">Showers4Less.com</a>
         — so your loved one still gets a more accessible bathing space.
       </p>
 
@@ -2293,13 +2322,16 @@ footer .bbb-fbrand{margin-bottom:1rem}
   <div class="footer-inner">
     <div>
       <div class="bbb-fbrand"><div class="footer-logo-wrap">
-        <img class="footer-logo" src="/assets/aging-safely-baths-logo-footer-dark.webp" alt="Aging Safely Baths &amp; More" width="260" height="69" loading="lazy" />
+        <img class="footer-logo" src="/assets/aging-safely-baths-logo-footer-dark.webp" alt="Aging Safely Baths &amp; More" width="280" height="74" loading="lazy" />
       </div><div class="bbb-fcard"><a class="bbb-seal bbb-f" href="https://www.bbb.org/us/co/denver/profile/walk-in-tubs/aging-safely-walk-in-tubs-1296-90145069/#sealclick" target="_blank" rel="nofollow noopener" aria-label="BBB Accredited Business — Aging Safely Walk in Tubs"><img src="https://seal-alaskaoregonwesternwashington.bbb.org/seals/blue-seal-200-65-bbb-90145069.png" width="200" height="65" alt="Aging Safely Walk in Tubs BBB Business Review" loading="lazy" decoding="async"></a><b>BBB Accredited Business</b></div></div>
       <div class="footer-badge">
         🇺🇸 Trusted provider of senior walk in tubs — All 50 states &amp; Canada
       </div>
       <div class="footer-nav">
         <a href="#top">Home</a>
+        <a href="/walk-in-tub-fit-check/">Walk-In Tub Fit Check</a>
+        <a href="/walk-in-tub-after-hip-or-knee-replacement/">After Hip or Knee Replacement</a>
+        <a href="/getting-in-and-out-of-a-walk-in-tub/">Getting In &amp; Out Safely</a>
         <a href="/walk-in-tubs/">Walk In Tub Models</a>
         <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener nofollow">AgingSafelyBaths.com</a>
         <a href="https://www.agingsafelybaths.com/walk-in-tubs/" target="_blank" rel="noopener nofollow">All Walk-In Tubs</a>
@@ -2309,7 +2341,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
         <a href="https://www.agingsafelybaths.com/factory-certified-installers/" target="_blank" rel="noopener nofollow">Factory Certified Installers</a>
         <a href="https://www.agingsafelybaths.com/walk-in-tub-guide/" target="_blank" rel="noopener nofollow">Walk-In Tub Guide</a>
         <a href="https://www.agingsafelybaths.com/roll-in-shower-guide/" target="_blank" rel="noopener nofollow">Roll-In Shower Guide</a>
-        <a href="https://www.showers4less.com" target="_blank" rel="noopener nofollow">Showers4Less.com</a>
+        <a href="https://showers4less.com/" target="_blank" rel="noopener nofollow">Showers4Less.com</a>
         <a href="https://www.seniorwalkinbathtubs.com" target="_blank" rel="noopener nofollow">SeniorWalkInBathtubs.com</a>
         <a href="#quote-form">Free Quote</a>
         <a href="/sitemap.xml">Sitemap</a>
@@ -2556,7 +2588,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
       "sameAs": [
         "https://www.agingsafelybaths.com",
         "https://www.seniorwalkinbathtubs.com",
-        "https://www.showers4less.com"
+        "https://showers4less.com/"
       ],
       "areaServed": {
         "@type": "Country",
@@ -2627,8 +2659,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
           {"@type": "Question", "name": "What is the best walk in tub for seniors with arthritis?", "acceptedAnswer": {"@type": "Answer", "text": "For seniors with arthritis, a hydrotherapy walk in tub with water jets, air jets or both provides the most therapeutic benefit. Warm water jet massage can help relieve joint stiffness, reduce muscle tension and improve circulation — making a meaningful difference in daily comfort. We can walk you through which hydrotherapy models are best suited to common arthritis patterns and mobility limitations."}},
           {"@type": "Question", "name": "Do senior walk in tubs require special plumbing or electrical?", "acceptedAnswer": {"@type": "Answer", "text": "Most senior walk in tubs connect to your existing hot and cold water lines and standard drain. Jet models typically require a dedicated 20-amp GFCI circuit for the motor and any heated components. If your current plumbing or electrical doesn't meet the requirements, that's factored into the installation plan and cost estimate — we walk through this before you commit to anything."}},
           {"@type": "Question", "name": "Can I get a senior walk in tub for a small bathroom?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — there are senior walk in tub models designed for compact or smaller bathrooms. Many fit within a standard 60-inch alcove. When you request a quote, sharing your bathroom measurements (or a quick photo) helps us confirm which models will work in your space. A smaller bathroom doesn't automatically rule out a walk in tub — it just means finding the right model."}},
-          {"@type": "Question", "name": "How high is the step-in on a senior walk in tub?", "acceptedAnswer": {"@type": "Answer", "text": "A walk in tub's entry threshold is usually just a few inches tall, compared with the roughly 14 to 15 inch wall you step over on a standard bathtub. The exact height varies by model, so compare the spec sheet with how high your loved one can comfortably lift their feet. If even a few inches is too much, a roll-in or low-threshold shower may be the safer choice."}},
-          {"@type": "Question", "name": "Should a senior walk in tub have an inward or outward swinging door?", "acceptedAnswer": {"@type": "Answer", "text": "Inward-swinging doors seal against water pressure and suit tight bathrooms because they need no clearance outside the tub. Outward-swinging doors leave more open space for getting in and out, which helps seniors who use a walker or need a caregiver's help, but they require clear floor space in front of the tub. Measure the open floor beside your current tub before choosing."}},
+          {"@type": "Question", "name": "How high is the step-in on a senior walk in tub?", "acceptedAnswer": {"@type": "Answer", "text": "A walk in tub's entry threshold is usually just a few inches tall, compared with the roughly 14 to 15 inch wall you step over on a standard bathtub. The exact height varies by model, so compare the spec sheet with how high your loved one can comfortably lift their feet. If even a few inches is too much, a roll-in or low-threshold shower may be the safer choice. Our walk-in tub fit check compares your step, seat and mobility needs with each tub type."}},
+          {"@type": "Question", "name": "Should a senior walk in tub have an inward or outward swinging door?", "acceptedAnswer": {"@type": "Answer", "text": "Inward-swinging doors seal against water pressure and suit tight bathrooms because they need no clearance outside the tub. Outward-swinging doors leave more open space for getting in and out, which helps seniors who use a walker or need a caregiver's help, but they require clear floor space in front of the tub. Measure the open floor beside your current tub before choosing. For walker tips, see our guide to getting in and out of a walk-in tub safely."}},
           {"@type": "Question", "name": "What safety features should a senior walk in tub include?", "acceptedAnswer": {"@type": "Answer", "text": "Look for a built-in grab bar near the door, a textured slip-resistant floor, a chair-height seat, controls that are easy to reach while seated, and an anti-scald (thermostatic mixing) valve that limits water temperature. A factory leak-tested door seal and clear warranty terms on the door and seal are also worth confirming before you buy."}}
         ]
     },
@@ -2669,36 +2701,6 @@ footer .bbb-fbrand{margin-bottom:1rem}
           "text": "Contact Aging Safely Baths at 1-888-779-2284 or complete the online quote form. A specialist will recommend the right senior walk in tub models for your space, mobility level and budget."
         }
       ]
-    },
-    {
-      "@type": "AggregateRating",
-      "@id": "https://seniorwalkintub.com/#aggregaterating",
-      "itemReviewed": { "@id": "https://seniorwalkintub.com/#organization" },
-      "ratingValue": "5.0",
-      "reviewCount": "14",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://seniorwalkintub.com/#organization" },
-      "author": { "@type": "Person", "name": "Patricia Zujkowski" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "What total everything we got when we contacted Zach Wennstedt at Aging Safely Baths! He helped us choose a beautiful tub that fits our tiny master bathroom. When a company cares this much about doing things right, you know you're in good hands."
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://seniorwalkintub.com/#organization" },
-      "author": { "@type": "Person", "name": "Mark Scaff" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Quality built products and 1st rate customer service. In a day when customer service is all but nonexistent these guys still believe that the customer is always right."
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://seniorwalkintub.com/#organization" },
-      "author": { "@type": "Person", "name": "Susan Hunt" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "We are extremely satisfied with our Aging Safely walk-in shower. The quality is excellent, sturdy, has everything needed for me to assist my husband. Plenty of room for an extra chair, walker or wheelchair."
     },
     {
       "@type": "BreadcrumbList",
