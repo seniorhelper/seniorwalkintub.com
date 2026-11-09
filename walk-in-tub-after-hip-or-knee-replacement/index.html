@@ -911,7 +911,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
       <h3>🎁 Free Walk In Tub Quote — Save $2,000</h3>
       <p>Fill out this short form and we'll follow up with a personalized comparison across all four brands we carry. Promo code <strong>SENIORWALKINTUB</strong> gets you $2,000 off.</p>
 
-      <form id="quoteFormBottom">
+      <form id="quoteFormBottom"><div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true"><label>Website (leave blank)<input type="text" name="hp_website" tabindex="-1" autocomplete="off"></label></div>
         <input type="hidden" name="source_site" value="seniorwalkintub.com/walk-in-tub-after-hip-or-knee-replacement/#bottom" />
         <div class="form-grid">
           <div class="form-group">
@@ -1030,7 +1030,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
     </div>
     <div style="font-size:0.88rem; color:var(--text-muted);">
       <p style="margin:0 0 0.75rem;">Share the basics and we'll follow up with model recommendations across all four brands — no obligation.</p>
-      <form id="modal-quote-form">
+      <form id="modal-quote-form"><div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true"><label>Website (leave blank)<input type="text" name="hp_website" tabindex="-1" autocomplete="off"></label></div>
         <input type="hidden" name="source_site" value="seniorwalkintub.com/walk-in-tub-after-hip-or-knee-replacement/#modal" />
         <div class="form-group" style="margin-bottom:0.65rem;">
           <label for="m-name">Name*</label>
@@ -1069,6 +1069,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
 <script>
   (function() { emailjs.init("alWutsHLG6c3h9P2j"); })();
 
+  var pageLoadedAt = Date.now();
   function handleForm(formId, statusId) {
     var formEl = document.getElementById(formId);
     if (!formEl) return;
@@ -1076,6 +1077,8 @@ footer .bbb-fbrand{margin-bottom:1rem}
       e.preventDefault();
       var form = this;
       var statusEl = document.getElementById(statusId);
+      if (form.hp_website && form.hp_website.value !== "") { statusEl.textContent = "✓ Thank you!"; statusEl.className = "form-status success"; return; }
+      if (Date.now() - pageLoadedAt < 3000) { statusEl.textContent = "Please take a moment to check your details, then press send again."; statusEl.className = "form-status error"; return; }
       statusEl.textContent = "Sending…";
       statusEl.className = "form-status";
       emailjs.sendForm("service_usimtub", "template_5n0cskt", form)
