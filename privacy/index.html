@@ -754,7 +754,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
 <h2>What the quote form collects</h2>
 <p>If you ask for a quote, the form collects your name, phone number, email address, ZIP code and message. You may also attach photos of your bathroom. We use this only to answer your request, prepare a quote and schedule a visit.</p>
 <h2>How your request is sent</h2>
-<p>The form sends your request to our company lead server at clients.eyetoad.com. It is operated for Aging Safely Baths by Eye To Ad Media. The server stores the request and emails our sales team. If that server is unavailable, the form may instead send your request through EmailJS (emailjs.com). That is a third-party delivery service with its own privacy policy, so we do not control how it handles data it receives.</p>
+<p>The form sends your request to our company lead server at clients.eyetoad.com. It is operated for Aging Safely Baths by Eye To Ad Media. The server stores the request and emails our sales team.</p>
 <h2>Calls and texts</h2>
 <p>If you give us your phone number, we may call or text you about your quote. Consent to calls or texts is not a condition of any purchase. Message and data rates may apply. Reply STOP to any text to end texts, or tell us on a call to remove you.</p>
 <h2>Analytics and cookies</h2>
@@ -838,7 +838,7 @@ footer .bbb-fbrand{margin-bottom:1rem}
     </div>
     <div style="font-size:0.88rem; color:var(--text-muted);">
       <p style="margin:0 0 0.75rem;">Share the basics and we'll follow up with model recommendations across all four brands, no obligation.</p>
-      <form id="modal-quote-form"><div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true"><label>Website (leave blank)<input type="text" name="hp_website" tabindex="-1" autocomplete="off"></label></div>
+      <form id="modal-quote-form"><div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true"><label>Website (leave blank)<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
         <input type="hidden" name="source_site" value="seniorwalkintub.com/living-alone-walk-in-tub-safety/#modal" />
         <div class="form-group" style="margin-bottom:0.65rem;">
           <label for="m-name">Name*</label>
@@ -872,41 +872,9 @@ footer .bbb-fbrand{margin-bottom:1rem}
   </div>
 </div>
 
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="/assets/quote.js" defer></script>
 <script>
-  window.emailjs = window.emailjs || { init: function () {}, sendForm: function () { return Promise.reject(new Error("form service unavailable")); } };
-  (function() { emailjs.init("alWutsHLG6c3h9P2j"); })();
 
-  var pageLoadedAt = Date.now();
-  function handleForm(formId, statusId) {
-    var formEl = document.getElementById(formId);
-    if (!formEl) return;
-    formEl.addEventListener("submit", function(e) {
-      e.preventDefault();
-      var form = this;
-      var statusEl = document.getElementById(statusId);
-      if (form.hp_website && form.hp_website.value !== "") { statusEl.textContent = "✓ Thank you!"; statusEl.className = "form-status success"; return; }
-      if (Date.now() - pageLoadedAt < 3000) { statusEl.textContent = "Please take a moment to check your details, then press send again."; statusEl.className = "form-status error"; return; }
-      statusEl.textContent = "Sending…";
-      statusEl.className = "form-status";
-      emailjs.sendForm("service_usimtub", "template_5n0cskt", form)
-        .then(function() {
-          statusEl.textContent = "✓ Thank you! We'll follow up with walk in tub options shortly.";
-          statusEl.className = "form-status success";
-          form.reset();
-        })
-        .catch(function(err) {
-          console.error("EmailJS error:", err);
-          statusEl.textContent = "Something went wrong. Please call 1-888-779-2284 (BATH).";
-          statusEl.className = "form-status error";
-        });
-    });
-  }
-
-  handleForm("quoteFormTop", "formStatusTop");
-  handleForm("quoteFormBottom", "formStatusBottom");
-  handleForm("modal-quote-form", "modal-form-status");
 
   function openQuoteModal() { document.getElementById("quote-modal").classList.add("active"); document.body.style.overflow = "hidden"; }
   function closeQuoteModal() { document.getElementById("quote-modal").classList.remove("active"); document.body.style.overflow = ""; }
